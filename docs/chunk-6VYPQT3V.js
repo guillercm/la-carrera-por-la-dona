@@ -1,1 +1,0 @@
-import{Fb as s,Ja as a,oa as n}from"./chunk-GYMYWFR2.js";import"./chunk-QEZ3K4DX.js";var o=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["simpsons-home-page"]],hostAttrs:[1,"w-100","h-100"],decls:1,vars:0,template:function(e,p){e&1&&a(0,"router-outlet")},dependencies:[s],encapsulation:2})};export{o as default};

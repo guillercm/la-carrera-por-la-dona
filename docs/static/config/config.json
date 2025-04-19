@@ -1,0 +1,349 @@
+{
+  "apis": {
+    "simpsons": {
+      "endpoints": {
+        "getRoomByName": "/rooms/{name}",
+        "postRoom": "/rooms",
+        "putRoom": "/rooms/{name}",
+        "deleteRoom": "/rooms/{name}"
+      }
+    }
+  },
+  "errors": {
+    "httpStatus": {
+      "generic": {
+        "data": {
+          "modal": {
+            "title": "Error desconocido",
+            "message": "Se ha producido un error inesperado. Por favor, intenta nuevamente más tarde o contacta con soporte."
+          }
+        }
+      },
+      "404": {
+        "data": {
+          "modal": {
+            "title": "i18n.common.errors.resourceNotFound",
+            "message": "i18n.common.errors.resourceMoved"
+          },
+          "page": {
+            "status": 404,
+            "title": "i18n.common.errors.pageNotFound",
+            "message": "i18n.common.errors.verifyUrl",
+            "img": "404.png",
+            "button": {
+              "route": "/",
+              "label": "i18n.common.backToHome"
+            }
+          }
+        }
+      },
+      "422": {
+        "data": {
+          "modal": {
+            "title": "i18n.common.errors.unprocessableEntity",
+            "message": "i18n.common.errors.verifyData"
+          }
+        }
+      },
+      "500": {
+        "data": {
+          "modal": {
+            "title": "i18n.common.errors.serverError",
+            "message": "i18n.common.errors.workingOnIt"
+          },
+          "page": {
+            "status": 500,
+            "title": "i18n.common.errors.serverError",
+            "message": "i18n.common.errors.workingOnIt",
+            "img": "500.png",
+            "button": {
+              "route": "/",
+              "label": "i18n.common.backToHome"
+            }
+          }
+        }
+      },
+      "408": {
+        "data": {
+          "modal": {
+            "title": "i18n.common.errors.timeout",
+            "message": "i18n.common.errors.checkConnection"
+          }
+        }
+      }
+    },
+    "validations": {
+      "auth": {
+        "email": {
+          "unique": {
+            "data": {
+              "modal": {
+                "title": "i18n.common.errors.serverError",
+                "message": "i18n.common.errors.theEmailAlreadyExists"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "simpsons": {
+      "board": {
+        "challenges": {
+          "letterSecretGame": [
+            "El Bus Escolar de Otto",
+            "La Planta Nuclear de Springfield",
+            "El Consejo de los Inmigrantes",
+            "El bar de Moe",
+            "Sideshow Bob",
+            "El árbol de Navidad de los Simpsons",
+            "La carrera de Kart de Homer",
+            "El monorriel de Springfield",
+            "La tienda de Lard Lad",
+            "El Simpsonbot",
+            "El salón de la fama de Springfield",
+            "La Banca de Apu",
+            "El frigorífico de los Simpsons",
+            "Las donas de Homero",
+            "Troy McClure",
+            "Maggie con el chupón",
+            "El juego de póker de los hombres",
+            "La habitación secreta de Mr. Burns",
+            "La boda de Homero y Marge",
+            "El Club de los Poetas Muertos",
+            "El comercial de Krusty",
+            "Moe's Tavern",
+            "Squeaky Voiced Teen",
+            "El tren de Krusty",
+            "El día en que el sol se oscureció",
+            "Kang y Kodos",
+            "El secreto de la familia Simpson",
+            "El menú de la cantina",
+            "Las películas de McBain",
+            "Los Muebles de El Barto",
+            "La fiesta de despedida de Apu"
+          ]
+        },
+        "player_colors": [
+          "#e74c3c",
+          "#3498db",
+          "#2ecc71",
+          "#9b59b6",
+          "#f1c40f",
+          "#e67e22",
+          "#78a9da",
+          "#bdc3c7"
+        ],
+        "squares": [
+          "church",
+          "moes_tavern",
+          "simpsons_house",
+          null,
+          "krusty_burger",
+          "police_department",
+          "dice",
+          "retirement_castle",
+          null,
+          "church",
+          "moes_tavern",
+          "simpsons_house",
+          "dice",
+          null,
+          "krusty_burger",
+          "police_department",
+          "retirement_castle",
+          null,
+          "dice",
+          "church",
+          "moes_tavern",
+          null,
+          "krusty_burger",
+          null,
+          "dice",
+          "retirement_castle",
+          "simpsons_house",
+          "police_department",
+          null,
+          null
+        ]
+      },
+      "roles": {
+        "krusty": {
+          "name": "Krusty el Payaso",
+          "priority": 3,
+          "winDirectly": [
+            "HomerEatsDona",
+            "IsElectedInVoting"
+          ]
+        },
+        "clancy": {
+          "name": "Clancy Wiggum",
+          "priority": 2,
+          "specialAbilities": [
+            {
+              "name": "¡A la cárcel!",
+              "description": "Puede enviar a cualquier jugador a la cárcel, impidiéndole lanzar el dado durante su siguiente turno. Ideal para frenar sospechosos o entorpecer planes enemigos.",
+              "ability": "sendToPrison",
+              "initialUses": 2
+            }
+          ],
+          "bonusPoints": {
+            "onVoteExpulsion": {
+              "targets": [
+                "krusty",
+                "fattony"
+              ],
+              "ifVoted": true,
+              "pointsPerVote": 10
+            }
+          },
+          "targetEnemy": {
+            "name": "fattony",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "fattony": {
+          "name": "Fat Tony",
+          "priority": 1,
+          "specialAbilities": [
+            {
+              "name": "Juego sucio",
+              "description": "Dispone de votos extra para usar en votaciones. Una vez usados, se revelará que un jugador aleatorio NO es Fat Tony.",
+              "ability": "extraVotes",
+              "initialUses": 3
+            }
+          ],
+          "bonusPoints": {
+            "onVoteExpulsion": {
+              "targets": [
+                "**"
+              ],
+              "ifVoted": true,
+              "points": 20
+            }
+          },
+          "targetEnemy": {
+            "name": "clancy",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "bart": {
+          "name": "Bart Simpson",
+          "priority": 1,
+          "specialAbilities": [
+            {
+              "name": "Graffiti",
+              "description": "Puede pintar casillas del tablero para cambiar su función.",
+              "ability": "changeTile",
+              "initialUses": 2
+            }
+          ],
+          "bonusPoints": {
+            "wrongAnswers": {
+              "minMistakes": 6,
+              "points": 10
+            }
+          },
+          "targetEnemy": {
+            "name": "lisa",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "lisa": {
+          "name": "Lisa Simpson",
+          "priority": 1,
+          "specialAbilities": [
+            {
+              "name": "Superdotada",
+              "description": "Dispone de comodines para ver la respuesta correcta en una prueba.",
+              "ability": "revealCorrectAnswer",
+              "initialUses": 2
+            }
+          ],
+          "bonusPoints": {
+            "correctWithinAttempts": {
+              "maxAttemptsAllowed": 2,
+              "points": 10
+            }
+          },
+          "targetEnemy": {
+            "name": "bart",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "marge": {
+          "name": "Marge Simpson",
+          "priority": 1,
+          "specialAbilities": [
+            {
+              "name": "¡Ten piedad!",
+              "description": "Puede evitar una expulsión después de las votaciones, sin importar el resultado.",
+              "ability": "saveFromExpulsion",
+              "initialUses": 1
+            }
+          ],
+          "bonusPoints": {
+            "roundWithoutExpulsion": {
+              "points": 30
+            }
+          },
+          "targetEnemy": {
+            "name": "abraham",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "abraham": {
+          "name": "Abraham Simpson",
+          "priority": 3,
+          "specialAbilities": [
+            {
+              "name": "Cabeza perdida",
+              "description": "Después de tirar el dado, puede elegir libremente entre moverse 4, 5 o 6 casillas.",
+              "ability": "chooseMovement",
+              "allowedValues": [
+                4,
+                5,
+                6
+              ],
+              "initialUses": 2
+            }
+          ],
+          "bonusPoints": {
+            "otherPlayerFirstTrySuccess": {
+              "points": 5
+            }
+          },
+          "targetEnemy": {
+            "name": "ned",
+            "pointsOnExpulsion": 2
+          }
+        },
+        "ned": {
+          "name": "Ned Flanders",
+          "priority": 3,
+          "specialAbilities": [
+            {
+              "name": "¡La santa biblia!",
+              "description": "Puede mover a un jugador a la iglesia más cercana en el tablero.",
+              "ability": "moveToChurch",
+              "initialUses": 2
+            }
+          ],
+          "bonusPoints": {
+            "churchCorrectAnswer": {
+              "points": 10
+            }
+          },
+          "targetEnemy": null
+        }
+      }
+    }
+  },
+  "languages": {
+    "availables": [
+      "es"
+    ],
+    "default": "es"
+  }
+}

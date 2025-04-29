@@ -11,15 +11,6 @@ Compite en un tablero lleno de desafíos estilo party game, ¡y sé el primero e
 
 ---
 
-## 🎮 Demo del juego
-
-📽️ Puedes ver un pequeño gameplay en este mismo repositorio:
-
-[▶️ Ver gameplay](./gameplay.mkv)
-
-
----
-
 
 ## 🛠️ Stack Tecnológico
 

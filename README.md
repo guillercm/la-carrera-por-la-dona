@@ -5,33 +5,36 @@ Compite en un tablero lleno de desafíos estilo party game, ¡y sé el primero e
 
 ---
 
+## 🚀 Demo en vivo
+
+👉 [¡Probar el juego!](https://guillercm.github.io/la-carrera-por-la-dona/)
+
+---
+
 ## Información técnica del workspace
 
 - Este juego está dentro de un workspace, en el que dentro tiene 4 proyectos:
+
 ![workspace-files](./static/readmy/img/workspace-files.png)
+    <br>
     - **grcm-components**: Mi librería para crear formularios dinámicos, que está publicado en npm. [Ver aquí](https://www.npmjs.com/package/grcm-components). Uso mi propia librería para todos los formularios del juego.
-    - **grcm-testbed-app**: No tiene nada especial, solo lo utilizo para hacer pruebas.
-    - **grcm-utilities**: Servicios, interfaces y componentes que en un pasado estuve haciendo en mi aplicación 'Angular'. [Ver repositorio](https://github.com/guillercm/angular). También uso esta librería en mi juego, aunque a diferencia de la otra librería, esta es privada, solo con cosas mías.
-    ![image info](./static/readmy/img/grcm-utilities-files.png)
-    - **la-carrera-por-la-dona**: El proyecto del juego.
+    - **grcm-testbed-app**: No tiene nada especial, solo lo utilizo para hacer pruebas.<br><br>
+    - **grcm-utilities**: Servicios, interfaces y componentes que en un pasado estuve haciendo en mi aplicación 'Angular'. [Ver repositorio](https://github.com/guillercm/angular). 
+    También uso esta librería en mi juego, aunque a diferencia de la otra librería, esta es privada, solo con cosas mías.
+    ![image info](./static/readmy/img/grcm-utilities-files.png)<br><br>
+    - **la-carrera-por-la-dona**: El proyecto del juego.<br><br>
 
 ---
 
 ## Información técnica del juego
 
-- **La carrera por la dona**: 
+- **La carrera por la dona**: <br>
     ![la carrera por la dona files](./static/readmy/img/simpsons-files.png)
     - **Auth**: Contiene la lógica de autenticación, basada en un sistema simple de nickname guardado en localStorage. Si hay nickname, el usuario entra directo al juego; si no, se redirige al login.
     - **Core**: Utilidades que uso en todo el juego, interceptores, el spinner global de carga de la app,etc.
     - **Simpsons**: La carpeta principal donde se desarrolla el juego.
     - **Shared**: En su mayoría, componentes de UI genéricos que utilizo en el juego.
 
-
----
-
-## 🚀 Demo en vivo
-
-👉 [¡Probar el juego!](https://guillercm.github.io/la-carrera-por-la-dona/)
 
 ---
 

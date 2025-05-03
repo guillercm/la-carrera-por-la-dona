@@ -20,7 +20,7 @@ Compite en un tablero lleno de desafíos estilo party game, ¡y sé el primero e
     - **grcm-components**: Mi librería para crear formularios dinámicos, que está publicado en npm. [Ver aquí](https://www.npmjs.com/package/grcm-components). Uso mi propia librería para todos los formularios del juego.
     - **grcm-testbed-app**: No tiene nada especial, solo lo utilizo para hacer pruebas.<br><br>
     - **grcm-utilities**: Servicios, interfaces y componentes que en un pasado estuve haciendo en mi aplicación 'Angular'. [Ver repositorio](https://github.com/guillercm/angular). 
-    También uso esta librería en mi juego, aunque a diferencia de la otra librería, esta es privada, solo con cosas mías.
+    También uso esta librería en mi juego, aunque a diferencia de la otra librería, esta es privada, solo con cosas mías.<br>
     ![image info](./static/readmy/img/grcm-utilities-files.png)<br><br>
     - **la-carrera-por-la-dona**: El proyecto del juego.<br><br>
 
